@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Labzlink - your direct link to all suppliers in Life Science</title>
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>Logo Search <a href="{% url 'homepage' %}">Home</a> Profile</header>
+        {% block underheader %}
+        {% endblock underheader %}
+        {% block listview %}
+        {% endblock listview %}
+        <footer><a href="{% url 'about' %}">About</a> Privacy_Policy Contact</footer>
+    </body>
+</html>

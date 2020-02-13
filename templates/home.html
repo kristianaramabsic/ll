@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block listview %}
+    {% for post in all_posts_list %}
+    <div>
+        <h2><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h2>
+        <p>{{post.author}} | {{post.date}}</p>
+        <p>{{post.text|truncatechars:200 }}</p>
+    </div>
+    {% endfor %}
+
+{% endblock listview %}
