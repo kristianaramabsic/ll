@@ -23,7 +23,7 @@ h2.signup_slogan {
     text-align: center;
     color: #ffffff;
     font-size: 2.5rem !important;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 p.author_date {
@@ -206,9 +206,9 @@ div.signup_form form p {
 
     div.signup_form {
         background-color: #fcfcfc;
-        width: 459px;
+        width: 459px !important;
         height: auto;
-        margin: auto;
+        margin: auto !important;
         border: 0.5px solid rgba(112, 112, 112, 0.4);
         padding: 20px;
     }
