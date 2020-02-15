@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #third_party
+    'crispy_forms',
+
     #myapps
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +126,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+#replace built-in user model with our custom user model
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+#redirect locations when users login or logout
+LOGIN_REDIRECT_URL = 'homepage'
+LOGOUT_REDIRECT_URL = 'homepage'
+
+#using bootstrap4 with crispy_forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
