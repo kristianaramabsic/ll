@@ -33,7 +33,7 @@ class BlogUpdateView (LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = 'update_post.html'
     fields = ['title', 'text']
     login_url = 'login'
-
+    
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
