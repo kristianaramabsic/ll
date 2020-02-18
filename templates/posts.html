@@ -1,4 +1,6 @@
 {%  extends 'base.html' %}
+{% load threadedcomments_tags %}
+{% load crispy_forms_tags %}
 
 {% block underheader %}
 <div>
@@ -9,6 +11,8 @@
     <p><a href="{% url 'update_post' post.pk %}">Edit post</a> | <a href="{% url 'delete_post' post.pk %}">Delete
     </a></p>
     {% endif %}
+    <p>Comments</p>
+    {% render_comment_list for post %}
+    {% render_comment_form for post %}
 </div>
-
 {% endblock underheader %}

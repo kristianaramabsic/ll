@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     #third_party
     'crispy_forms',
+    'threadedcomments',
+    'django_comments',
+    'django.contrib.sites',
 
     #myapps
     'blog.apps.BlogConfig',
@@ -140,3 +143,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #send e-mails from the platform
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#app for commenting on posts
+COMMENTS_APP = 'threadedcomments'
+SITE_ID = 1
