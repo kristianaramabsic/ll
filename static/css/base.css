@@ -167,6 +167,7 @@ div.signup_form form p {
     text-align: center;
 }
 
+
 @media only screen and (min-width: 1025px){
 
     .inside_div {
@@ -213,8 +214,13 @@ div.signup_form form p {
         padding: 20px;
     }
 }
-            
-        
+
+/* style for textbox for commenting */
+textarea#id_comment {
+    width: 50%;
+    height: 100px;
+    border-color: #0080FF;
+}
         
         
         
